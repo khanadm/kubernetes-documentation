@@ -88,7 +88,10 @@ Physical server or VM that runs applications using pods.
 Kubelet
 ---
 
-It monitors the API server for pods that are scheduled to the node and start the pod’s container by instructing the container runtime engine, then reports the status of the running containers back to the API server.
+It monitors the API server for pods that are scheduled to the node and start the pod’s container by instructing the container runtime engine, 
+then reports the status of the running containers back to the API server.
+
+Kubelet is the technology that applies, creates, updates, and destroys containers on a Kubernetes node.
 
 Kube Proxy
 ---
