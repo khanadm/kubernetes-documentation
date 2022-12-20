@@ -136,6 +136,36 @@ kubectl describe svc my_svc  #Describes about the specified service
 ---
 
 
+Replica controller vs Replica set
+---
+
+
+![Difference](https://user-images.githubusercontent.com/106643382/208720074-67e34382-76e0-4bc4-9910-5a6a9e42c857.png "Difference")
+
+---
+
+
+Persistent Volume (PV)
+---
+
+
+
+Kubernetes makes physical storage devices such as our SSDs, NFS servers available to your cluster in the form of objects called Persistent Volumes.
+
+---
+
+Persistent Volume Claims
+---
+
+
+
+A persistent volume claim (PVC) is a request for storage by a user from a PV. Claims can request specific size and access modes 
+(e.g: they can be mounted once read/write or many times read-only).
+
+If none of the static persistent volumes match the user’s PVC request, the cluster may attempt to dynamically create a PV that
+matches the PVC request based on storage class.
+
+---
 
 
 
