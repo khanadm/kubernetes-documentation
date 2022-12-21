@@ -171,11 +171,44 @@ matches the PVC request based on storage class.
 What are the types of Kubernetes services?
 ---
 
-ClusterIP.Exposes a service which is only accessible from within the cluster.
+ClusterIP.   Exposes a service which is only accessible from within the cluster.
 
-NodePort. Exposes a service via a static port on each node’s IP.
+NodePort.    Exposes a service via a static port on each node’s IP.
 
-LoadBalancer. Exposes the service via the cloud provider’s load balancer.
+LoadBalancer.  Exposes the service via the cloud provider’s load balancer.
+
+---
+
+What is the Kubernetes ClusterIP service?
+---
+
+ClusterIP is the default type of service, which is used to expose a service on an IP address internal to the cluster. 
+Access is only permitted from within the cluster.
+
+---
+
+What is the Kubernetes NodePort service ?
+---
+
+It is an open port on every worker node in the cluster that has a pod for that service. When traffic is received on that open port, 
+it directs it to a specific port on the ClusterIP for the service it is representing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
