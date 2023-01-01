@@ -171,7 +171,9 @@ matches the PVC request based on storage class.
 What are the types of Kubernetes services?
 ---
 
-ClusterIP.  This is the default service of Kubernetes which allows us to communicate within Kubernetes, which is internal communication, so for external
+CIngress is a load balancer for Kubernetes, the main purpose of ingress is to expose the HTTPS and HTTP routes that are outside the cluster to the services 
+within the cluster itself. By the use of ingress controller, we can also define the rules which can turn control the traffic routing.
+ lusterIP.  This is the default service of Kubernetes which allows us to communicate within Kubernetes, which is internal communication, so for external
  traffic, it uses a proxy to communicate. This service is useful when we want to debug the service or want to show interact Kubernetes dashboards Exposes
  a service which is only accessible from within the cluster.
 
@@ -184,7 +186,11 @@ used services. Exposes a service via a static port on each node’s IP.
 LoadBalancer.  This component allows us to connect with the service externally to the internet, so in such a scenario, it will help us to forward all
  the external traffic to the respective service, also; as we know in Kubernetes, we have specific IP to every service.Exposes the service via the cloud 
  provider’s load balancer.
-
+ 
+ 
+ Ingress  Ingress is a load balancer for Kubernetes, the main purpose of ingress is to expose the HTTPS and HTTP routes that are outside the cluster to the services 
+          within the cluster itself. By the use of ingress controller, we can also define the rules which can turn control the traffic routing.
+ 
 ---
 
 What is the Kubernetes ClusterIP service?
@@ -243,13 +249,7 @@ Deployment
 Describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. 
 You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.
 
-
-Ingress
 ---
-
-Ingress is a load balancer for Kubernetes, the main purpose of ingress is to expose the HTTPS and HTTP routes that are outside the cluster to the services 
-within the cluster itself. By the use of ingress controller, we can also define the rules which can turn control the traffic routing.
-
 
 ConfigMap
 ---
