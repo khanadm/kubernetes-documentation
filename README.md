@@ -193,21 +193,61 @@ What is the Kubernetes NodePort service ?
 It is an open port on every worker node in the cluster that has a pod for that service. When traffic is received on that open port, 
 it directs it to a specific port on the ClusterIP for the service it is representing
 
+---
+
+What is Pod ? 
+
+A pod is a collection of containers and its storage inside a node of a Kubernetes cluster. It is possible to create a pod with multiple containers inside it.
+
+---
+
+Sample .yml file
+---
 
 
 
+```
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: nginx
+
+spec:
+
+  containers:
+
+  - name: nginx
+
+    image: nginx:1.14.2
+
+    ports:
+
+    - containerPort: 80
+
+```
+
+Deployment
+---
+
+Describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. 
+You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.
 
 
+Ingress
+---
+
+Ingress is a load balancer for Kubernetes, the main purpose of ingress is to expose the HTTPS and HTTP routes that are outside the cluster to the services 
+within the cluster itself. By the use of ingress controller, we can also define the rules which can turn control the traffic routing.
 
 
+ConfigMap
+---
 
-
-
-
-
-
-
-
+A ConfigMap is an API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, 
+command-line arguments, or as configuration files in a volume.
 
 
 
