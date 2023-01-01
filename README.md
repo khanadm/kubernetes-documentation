@@ -171,11 +171,19 @@ matches the PVC request based on storage class.
 What are the types of Kubernetes services?
 ---
 
-ClusterIP.   Exposes a service which is only accessible from within the cluster.
+ClusterIP.  This is the default service of Kubernetes which allows us to communicate within Kubernetes, which is internal communication, so for external
+ traffic, it uses a proxy to communicate. This service is useful when we want to debug the service or want to show interact Kubernetes dashboards Exposes
+ a service which is only accessible from within the cluster.
 
-NodePort.    Exposes a service via a static port on each node’s IP.
 
-LoadBalancer.  Exposes the service via the cloud provider’s load balancer.
+NodePort.   This service allows us to open ports on the virtual machine, and after this, traffic gets forwarded to these ports. This is one of the most 
+used services. Exposes a service via a static port on each node’s IP.
+
+
+
+LoadBalancer.  This component allows us to connect with the service externally to the internet, so in such a scenario, it will help us to forward all
+ the external traffic to the respective service, also; as we know in Kubernetes, we have specific IP to every service.Exposes the service via the cloud 
+ provider’s load balancer.
 
 ---
 
@@ -250,8 +258,12 @@ A ConfigMap is an API object used to store non-confidential data in key-value pa
 command-line arguments, or as configuration files in a volume.
 
 
+Networking
+---
 
 
+Networking is a critical aspect of Kubernetes. It is an enabler of communication between Kubernetes components. Kubernetes networking also allows 
+these components to communicate with other applications.
 
 
 
