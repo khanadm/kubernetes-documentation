@@ -193,13 +193,7 @@ the external traffic to the respective service, also; as we know in Kubernetes, 
  
 ---
 
-What is the Kubernetes ClusterIP service?
----
 
-ClusterIP is the default type of service, which is used to expose a service on an IP address internal to the cluster. 
-Access is only permitted from within the cluster.
-
----
 
 What is the Kubernetes NodePort service ?
 ---
