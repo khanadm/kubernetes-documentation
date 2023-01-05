@@ -245,3 +245,45 @@ Platforms that use containers as a container runtime are:
 
 * rkt
 
+---
+
+Sample yml file
+---
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: frontend
+    spec:
+      containers:
+      - image: wordpress:latest
+        name: wordpress
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: database-1.c9qq8he3gv6d.ap-south-1.rds.amazonaws.com
+        - name: WORDPRESS_DB_USER
+          value: admin
+        - name: WORDPRESS_DB_PASSWORD
+          value: password
+        - name: WORDPRESS_DB_NAME
+          value: blog
+        ports:
+        - containerPort: 80
+          name: wordpress
+          
+```
