@@ -247,7 +247,7 @@ Platforms that use containers as a container runtime are:
 
 ---
 
-Sample yml file
+Sample Deployment .yml file
 ---
 
 ```
