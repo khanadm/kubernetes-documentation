@@ -39,21 +39,7 @@ Controller Manager
 It continuously watches the shared state of the cluster and makes corrective changes to bring the current state to the desired state.
 
 
-
-Examples of controllers:
 ---
-
-- Replication controller
-
-- Namespace controller
-
-- Endpoint controller
-
-- Service account controller
-
-
-
-
 Scheduler
 ---
 
@@ -97,23 +83,6 @@ Kube Proxy
 ---
 
 It makes services available to the external hosts, manages network rules and port forwarding. It also serves as a Network proxy and Load balancer and handles the network routing for TCP and UDP packets.
-
-Container Runtime
----
-
-It is the underlying software that runs the containers and handles the container’s lifecycle in an isolated but lightweight environment.
-
-
-Platforms that use containers as a container runtime are:
-
-* Docker
-
-* Containerd
-
-* Cri-o
-
-* rktlet
-
 
 Kubectl
 ---
@@ -260,5 +229,19 @@ Networking is a critical aspect of Kubernetes. It is an enabler of communication
 these components to communicate with other applications.
 
 
+Container Runtime
+---
 
+It is the underlying software that runs the containers and handles the container’s lifecycle in an isolated but lightweight environment.
+
+
+Platforms that use containers as a container runtime are:
+
+* Docker
+
+* Containerd
+
+* Cri-o
+
+* rkt
 
