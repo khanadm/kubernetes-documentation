@@ -206,11 +206,6 @@ spec:
 
 ```
 
-Deployment
----
-
-Describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. 
-You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.
 
 ---
 
@@ -247,8 +242,19 @@ Platforms that use containers as a container runtime are:
 
 ---
 
+
+Deployment
+---
+
+Describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. 
+You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.
+
+---
+
 Sample Deployment .yml file
 ---
+
+
 
 ```
 apiVersion: apps/v1
